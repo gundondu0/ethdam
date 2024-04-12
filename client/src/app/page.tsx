@@ -6,6 +6,7 @@ import SelectToken from "../components/SelectToken";
 import TransactionConfirmed from "@/components/TransactionConfirmed";
 import ErrorTransaction from "@/components/ErrorTransaction";
 import State from "@/components/ButtonState";
+import SelectAmount from "../components/SelectAmount";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <ErrorTransaction></ErrorTransaction>
       <Button bg={"primary"}></Button>
       <State></State>
+      <h1>Amount</h1>
+      <SelectAmount></SelectAmount>
     </div>
   );
 }
