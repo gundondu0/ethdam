@@ -1,5 +1,7 @@
+"use client"
 import { Box, Link, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { MetaMaskButton } from "@metamask/sdk-react-ui";
 
 
 const Navbar = () => {
@@ -12,6 +14,9 @@ const Navbar = () => {
             <NextLink href="/swap" passHref>
                 <Link mr={4}>Swap</Link>
             </NextLink>
+            <MetaMaskButton theme={"light"} color="white"></MetaMaskButton>
+
+
         </Box>
     );
 };

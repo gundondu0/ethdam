@@ -2,6 +2,7 @@
 import { ChakraProvider } from '@chakra-ui/provider'
 import { extendTheme } from '@chakra-ui/react'
 
+
 const theme = extendTheme({
     colors: {
         'text': '#0a0e04',
