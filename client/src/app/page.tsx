@@ -3,6 +3,7 @@ import { Box, Button, ButtonGroup } from '@chakra-ui/react'
 import TestComponent from '../components/test'
 import AmountInput from '../components/amount_input';
 import SelectToken from '../components/SelectToken';
+import TransactionConfirmed from '@/components/TransactionConfirmed';
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <AmountInput></AmountInput>
       <TestComponent></TestComponent>
       <SelectToken></SelectToken>
+      <TransactionConfirmed></TransactionConfirmed>
       <Button bg={"primary"}></Button>
     </div>
   );
