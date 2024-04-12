@@ -3,12 +3,12 @@ import React from 'react';
 interface NewComponentProps {
 }
 
-const NewComponent: React.FC<NewComponentProps> = () => {
+const TestComponent: React.FC<NewComponentProps> = () => {
     return (
         <div>
-            New Component
+            Test Component
         </div>
     );
 }
 
-export default NewComponent;
+export default TestComponent;
