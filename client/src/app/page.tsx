@@ -1,7 +1,7 @@
 "use client"
 import { Box, Button, ButtonGroup } from '@chakra-ui/react'
 import TestComponent from '../components/test'
-import AmountInput from '../components/amount_input';
+import AmountInput from '../components/AmountInput';
 import SelectToken from '../components/SelectToken';
 import TransactionConfirmed from '@/components/TransactionConfirmed';
 
