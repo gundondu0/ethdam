@@ -4,6 +4,7 @@ import TestComponent from '../components/test'
 import AmountInput from '../components/AmountInput';
 import SelectToken from '../components/SelectToken';
 import TransactionConfirmed from '@/components/TransactionConfirmed';
+import ErrorTransaction from '@/components/ErrorTransaction';
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <TestComponent></TestComponent>
       <SelectToken></SelectToken>
       <TransactionConfirmed></TransactionConfirmed>
+      <ErrorTransaction></ErrorTransaction>
       <Button bg={"primary"}></Button>
     </div>
   );
