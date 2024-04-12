@@ -2,10 +2,6 @@
 import { ChakraProvider } from '@chakra-ui/provider'
 import { extendTheme } from '@chakra-ui/react'
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 const theme = extendTheme({
     colors: {
         'text': '#0a0e04',
