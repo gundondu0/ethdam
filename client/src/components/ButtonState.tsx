@@ -1,9 +1,9 @@
 // pages/page.tsx
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { Button } from "@chakra-ui/react";
+import { MetaMaskButton } from "@metamask/sdk-react-ui";
 
-const State = () => {
+const ButtonState = () => {
   // State to hold which button to show based on the boolean from the server
   const [showFirstButton, setShowFirstButton] = useState(true); // Default to true
 
@@ -23,20 +23,16 @@ const State = () => {
   return (
     <div>
       {showFirstButton ? (
-        <Link href="/swap" passHref>
-          <Button as="a" colorScheme="blue">
-            Go to First Link
-          </Button>
-        </Link>
+
+        <MetaMaskButton theme={"light"} color="orange" icon="no-icon"></MetaMaskButton>
+
       ) : (
-        <Link href="/second-link" passHref>
-          <Button as="a" colorScheme="teal">
-            Go to Second Link
-          </Button>
-        </Link>
+        <Button as="a" bg="primary">
+          Swap
+        </Button>
       )}
     </div>
   );
 };
 
-export default State;
+export default ButtonState;

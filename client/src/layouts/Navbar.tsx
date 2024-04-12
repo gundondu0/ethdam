@@ -6,7 +6,7 @@ import { MetaMaskButton } from "@metamask/sdk-react-ui";
 
 const Navbar = () => {
     return (
-        <Box bg="primary" w="100%" p={4} color="text" display="flex" alignItems="center" justifyContent="space-between">
+        <Box bg="secondary" w="100%" p={4} color="text" display="flex" alignItems="center" justifyContent="space-between">
             <Box>
                 <NextLink href="/" passHref>
                     <Link mr={4}>Home</Link>

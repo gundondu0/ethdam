@@ -9,22 +9,22 @@ const SelectAmount: React.FC = () => {
       <Stack direction='row' spacing={6}> 
         <Stack direction='column' alignItems='center'> 
           <Radio value='1' /> 
-          <span style={{ textAlign: 'center' }}>0.1 weth</span> 
+          <span style={{ textAlign: 'center' }}>0.1 WETH</span> 
         </Stack> 
         <Divider orientation="vertical" /> 
         <Stack direction='column' alignItems='center'> 
           <Radio value='2' /> 
-          <span style={{ textAlign: 'center' }}>1 weth</span> 
+          <span style={{ textAlign: 'center' }}>1 WETH</span> 
         </Stack> 
         <Divider orientation="vertical" /> 
         <Stack direction='column' alignItems='center'> 
           <Radio value='3' /> 
-          <span style={{ textAlign: 'center' }}>10 weth</span> 
+          <span style={{ textAlign: 'center' }}>10 WETH</span> 
         </Stack> 
         <Divider orientation="vertical" /> 
         <Stack direction='column' alignItems='center'> 
           <Radio value='4' /> 
-          <span style={{ textAlign: 'center' }}>100 weth</span> 
+          <span style={{ textAlign: 'center' }}>100 WETH</span> 
         </Stack> 
       </Stack> 
     </RadioGroup> 

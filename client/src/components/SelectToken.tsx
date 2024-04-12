@@ -13,11 +13,9 @@ const SelectToken: React.FC<SelectTokenProps> = () => {
     };
 
     return (
-        <div style={{ width: '150px' }}>
-            <Select placeholder='Select a token' size='medium' value={value} onChange={handleChange}>
-                <option value='WETH'>ETH</option>
+            <Select placeholder='Select a token' value={value} onChange={handleChange} mr={2}>
+                <option value='WETH'>WETH</option>
             </Select>
-        </div>
     );
 }
 

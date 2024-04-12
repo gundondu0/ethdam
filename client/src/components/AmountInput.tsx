@@ -16,7 +16,7 @@ const AmountInput = () => { // Define a component named AmountInput
   };
 
   return (
-    <NumberInput defaultValue={0} min={0} value={value} onChange={handleChange}>
+    <NumberInput defaultValue={0} min={0} value={value} onChange={handleChange} minW="150">
       <NumberInputField />
     </NumberInput>
   );

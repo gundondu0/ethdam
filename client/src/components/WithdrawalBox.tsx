@@ -7,7 +7,7 @@ interface Wallet {
   amount: string;
 }
 
-const CryptoWithdrawalForm = () => {
+const WithdrawalBox = () => {
   const [wallets, setWallets] = useState<Wallet[]>([
     { address: "", amount: "" },
   ]);
@@ -86,10 +86,10 @@ const CryptoWithdrawalForm = () => {
         </Flex>
       ))}
       <Flex>
-        <Button colorScheme="blue" onClick={handleWithdrawal} mr={2}>
+        <Button bg="primary" onClick={handleWithdrawal} mr={2}>
           Withdraw
         </Button>
-        <Button colorScheme="blue" onClick={handleAddWallet}>
+        <Button bg="primary" onClick={handleAddWallet}>
           + Add Wallet
         </Button>
       </Flex>
@@ -97,4 +97,4 @@ const CryptoWithdrawalForm = () => {
   );
 };
 
-export default CryptoWithdrawalForm;
+export default WithdrawalBox;
