@@ -12,7 +12,7 @@ const State = () => {
       // Simulating a server response with a delay
       setTimeout(() => {
         // Simulate fetching data that returns true or false
-        const serverResponse = true; // Change to false as needed to simulate different responses
+        const serverResponse = false; // Change to false as needed to simulate different responses
         setShowFirstButton(serverResponse);
       }, 1000); // Delay of 1 second
     };
