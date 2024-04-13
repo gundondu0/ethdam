@@ -18,7 +18,7 @@ const AmountInput = () => {
       defaultValue={0}
       min={0}
       value={value}
-      placeholder="Amount"
+      _placeholder="Amount"
       borderColor="black"
       borderWidth="1px"
       boxShadow="hg" // Apply medium shadow predefined by Chakra UI
