@@ -21,6 +21,7 @@ export default function Home() {
       <State></State>
       <h1>Amount</h1>
       <SelectAmount></SelectAmount>
+      <ErrorTransaction></ErrorTransaction>
     </div>
   );
 }
