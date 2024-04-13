@@ -7,6 +7,9 @@ import TransactionConfirmed from "@/components/TransactionConfirmed";
 import ErrorTransaction from "@/components/ErrorTransaction";
 import State from "@/components/ButtonState";
 import SelectAmount from "../components/SelectAmount";
+import InitialFocus from "@/components/CustomTransaction";
+import WithdrawItem from "@/components/WithdrawItem";
+import WithdrawBox from "@/components/WithdrawBox";
 
 export default function Home() {
   return (
@@ -22,6 +25,7 @@ export default function Home() {
       <h1>Amount</h1>
       <SelectAmount></SelectAmount>
       <ErrorTransaction></ErrorTransaction>
+      <WithdrawBox />
     </div>
   );
 }
