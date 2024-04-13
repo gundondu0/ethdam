@@ -43,7 +43,6 @@ const WithdrawalBox = () => {
     <Flex
       direction="column"
       alignItems="center"
-      maxWidth="400px"
       margin="auto"
       border="1px solid #CBD5E0"
       borderRadius="md"

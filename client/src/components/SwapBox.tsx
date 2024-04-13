@@ -8,7 +8,7 @@ import SelectAmount from "./SelectAmount";
 
 
 const SwapBox = () => {
-    const [inputType, setInputType] = useState(true);
+  const [inputType, setInputType] = useState(true);
 
   return (
     <Flex
@@ -37,10 +37,10 @@ const SwapBox = () => {
           borderColor="black" // Color of the border using Chakra UI color system
           borderStyle="solid" // S
         >
-            <BiTransfer size={30} onClick={() => setInputType(!inputType)} />
+          <BiTransfer size={30} onClick={() => setInputType(!inputType)} />
         </Box>
       </Flex >
-    <ButtonState />
+      <ButtonState />
     </Flex >
   );
 };
