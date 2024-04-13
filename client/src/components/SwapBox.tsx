@@ -1,5 +1,5 @@
-import React, { use, useState } from 'react';
-import { Box, Button, Flex, HStack, Spacer } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Flex, Spacer } from '@chakra-ui/react';
 import SelectToken from './SelectToken';
 import AmountInput from './AmountInput';
 import ButtonState from './ButtonState';
@@ -7,8 +7,10 @@ import { BiTransfer } from 'react-icons/bi';
 import SelectAmount from './SelectAmount';
 
 
+
 const SwapBox = () => {
     const [inputType, setInputType] = useState(true);
+
 
     return (
         <Flex
