@@ -3,31 +3,27 @@ import { NumberInput, NumberInputField, Input } from "@chakra-ui/react";
 
 const AmountInput = () => {
   // Define a component named AmountInput
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState("");
 
-  const handleChange = (_: string, valueAsNumber: number) => {
-    if (isNaN(valueAsNumber)) {
-      setValue(0);
-    } else {
-      setValue(valueAsNumber);
-    }
-  };
+  const handleChange = (event: any) => setValue(event.target.value);
 
   return (
     <Input
-      defaultValue={0}
-      min={0}
       value={value}
-      _placeholder="Amount"
       borderColor="black"
       borderWidth="1px"
+      _placeholder={{
+        // Adding styles to the placeholder
+        color: "black", // Sets the color of the placeholder text
+        fontFamily: "Arial, sans-serif", // Changes the font family of the placeholder
+        fontStyle: "italic", // Optionally, makes the placeholder text italic
+      }}
+      placeholder="Amount"
       boxShadow="hg" // Apply medium shadow predefined by Chakra UI
       bgColor="#3ae8d7"
       _hover={{ boxShadow: "lg" }} // Larger shadow on hover
       _focus={{ boxShadow: "xl" }}
-      onChange={(event) =>
-        handleChange(event.target.value, parseFloat(event.target.value))
-      }
+      onChange={handleChange}
       minW="150"
     ></Input>
   );
