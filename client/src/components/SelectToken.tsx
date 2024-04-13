@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Select } from "@chakra-ui/react";
 
-interface SelectTokenProps { }
+interface SelectTokenProps {}
 
 const SelectToken: React.FC<SelectTokenProps> = () => {
   const [value, setValue] = useState("ETH");
@@ -18,6 +18,8 @@ const SelectToken: React.FC<SelectTokenProps> = () => {
       mr={2}
       borderColor="black"
       borderWidth="1px"
+      _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+      _focus={{ boxShadow: "xl" }}
     >
       <option value="WETH">WETH</option>
     </Select>

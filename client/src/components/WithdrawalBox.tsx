@@ -70,6 +70,8 @@ const WithdrawalBox = () => {
                 fontFamily: "Arial, sans-serif", // Changes the font family of the placeholder
                 fontStyle: "italic", // Optionally, makes the placeholder text italic
               }}
+              _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+              _focus={{ boxShadow: "xl" }}
             />
           </Flex>
           <Flex flex="1" alignItems="center">
@@ -89,6 +91,8 @@ const WithdrawalBox = () => {
               }}
               border="1px solid black"
               borderRadius="md"
+              _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+              _focus={{ boxShadow: "xl" }}
             />
           </Flex>
           {index !== 0 && (
