@@ -1,35 +1,41 @@
 // pages/page.tsx
-import React, { useState, useEffect } from "react";
-import { Button } from "@chakra-ui/react";
-import { MetaMaskButton } from "@metamask/sdk-react-ui";
+import React, { useState } from "react";
+import { Button, Flex, Spacer, Text } from "@chakra-ui/react";
+import { useSDK } from "@metamask/sdk-react-ui";
 
 const ButtonState = () => {
-  // State to hold which button to show based on the boolean from the server
-  const [showFirstButton, setShowFirstButton] = useState(true); // Default to true
+  const [account, setAccount] = useState<string>();
+  const { sdk, connected, connecting, provider, chainId } = useSDK();
 
-  useEffect(() => {
-    const fetchButtonState = async () => {
-      // Simulating a server response with a delay
-      setTimeout(() => {
-        // Simulate fetching data that returns true or false
-        const serverResponse = true; // Change to false as needed to simulate different responses
-        setShowFirstButton(serverResponse);
-      }, 1000); // Delay of 1 second
-    };
-
-    fetchButtonState();
-  }, []);
+  const connect = async () => {
+    try {
+      const accounts: any = await sdk?.connect();
+      setAccount(accounts?.[0]);
+    } catch (err) {
+      console.warn("failed to connect..", err);
+    }
+  };
 
   return (
     <div>
-      {showFirstButton ? (
-
-        <MetaMaskButton theme={"light"} color="orange" icon="no-icon"></MetaMaskButton>
-
-      ) : (
-        <Button as="a" bg="primary">
+      {!connected ? (
+        <Button bg="primary" onClick={connect}>
+          Connect Wallet
+        </Button>
+      ) : (<Flex direction={"column"} align="center">
+        <Button bg="primary">
           Swap
         </Button>
+        <Spacer minW={4} />
+        <Flex direction="column">
+          <Text fontSize={"xs"}>
+            {chainId && `Connected chain: ${chainId}`}
+          </Text>
+          <Text fontSize={"xs"}>
+            {account && `Connected account: ${account}`}
+          </Text>
+        </Flex>
+      </Flex>
       )}
     </div>
   );

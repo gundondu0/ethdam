@@ -2,6 +2,8 @@
 import { Box, Link, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { MetaMaskButton } from "@metamask/sdk-react-ui";
+import { useState } from "react";
+
 
 const Navbar = () => {
   return (
