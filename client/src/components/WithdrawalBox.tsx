@@ -64,6 +64,7 @@ const WithdrawalBox = () => {
               border="1px solid black"
               borderRadius="md"
               mr={2}
+              bgColor="#3ae8d7"
               _placeholder={{
                 // Adding styles to the placeholder
                 color: "black", // Sets the color of the placeholder text
@@ -79,6 +80,7 @@ const WithdrawalBox = () => {
               flex="1"
               type="number"
               placeholder="Amount"
+              bgColor="#3ae8d7"
               value={wallet.amount}
               onChange={(e) =>
                 handleInputChange(index, "amount", e.target.value)
@@ -113,7 +115,6 @@ const WithdrawalBox = () => {
           border="1px solid black"
           borderRadius="md"
           color="black" // Sets the text color to black
-          fontFamily="Arial, sans-serif" // Sets the font family of the text
         >
           Withdraw
         </Button>

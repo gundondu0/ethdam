@@ -12,6 +12,13 @@ const AmountInput = (amount, handleAmountChange) => {
       _placeholder="Amount"
       borderColor="black"
       borderWidth="1px"
+      _placeholder={{
+        // Adding styles to the placeholder
+        color: "black", // Sets the color of the placeholder text
+        fontFamily: "Arial, sans-serif", // Changes the font family of the placeholder
+        fontStyle: "italic", // Optionally, makes the placeholder text italic
+      }}
+      placeholder="Amount"
       boxShadow="hg" // Apply medium shadow predefined by Chakra UI
       bgColor="#3ae8d7"
       _hover={{ boxShadow: "lg" }} // Larger shadow on hover
