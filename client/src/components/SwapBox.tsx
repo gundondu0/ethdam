@@ -21,6 +21,8 @@ const SwapBox = () => {
       maxHeight="300px"
       overflowY="auto"
       bgGradient="radial(circle, secondary, accent)"
+      borderColor="black"
+      borderWidth="2px"
     >
       <Flex flex="3" alignItems="center" mb="4">
         {inputType ? <AmountInput /> : <SelectAmount />}
@@ -30,7 +32,7 @@ const SwapBox = () => {
           _hover={{ cursor: "pointer", bg: "lightgray" }}
           borderRadius={15}
           p="1"
-          borderWidth="2px" // Width of the border
+          borderWidth="1px" // Width of the border
           borderColor="black" // Color of the border using Chakra UI color system
           borderStyle="solid" // S
         >

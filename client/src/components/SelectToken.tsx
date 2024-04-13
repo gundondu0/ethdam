@@ -17,7 +17,7 @@ const SelectToken: React.FC<SelectTokenProps> = () => {
       onChange={handleChange}
       mr={2}
       borderColor="black"
-      borderWidth="2px"
+      borderWidth="1px"
     >
       <option value="WETH">WETH</option>
     </Select>

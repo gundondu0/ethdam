@@ -21,7 +21,7 @@ const AmountInput = () => {
       onChange={handleChange}
       minW="150"
     >
-      <NumberInputField borderColor="black" borderWidth="2px" />
+      <NumberInputField borderColor="black" borderWidth="1px" />
     </NumberInput>
   );
 };
