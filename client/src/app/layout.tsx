@@ -4,8 +4,8 @@ import "./globals.css";
 import { UIProvider } from "../context/UIProvider";
 import Navbar from "@/layouts/Navbar";
 import WalletProvider from "@/context/WalletProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/layouts/Footer";
+import { Box, Flex } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,12 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="main">
 
         <UIProvider>
           <WalletProvider>
-            <Navbar />
-            {children}
+            <Flex direction="column" minHeight="100vh" >
+              <Box flex="1">
+                <Navbar />
+                {children}
+              </Box>
+              <Footer />
+            </Flex>
           </WalletProvider>
         </UIProvider>
       </body>

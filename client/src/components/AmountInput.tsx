@@ -1,24 +1,31 @@
-import React, { useState } from 'react'; // Import React
-import {
-  NumberInput,
-  NumberInputField,
-} from '@chakra-ui/react';
+import React, { useState } from "react"; // Import React
+import { Input } from "@chakra-ui/react";
 
-const AmountInput = () => { // Define a component named AmountInput
-  const [value, setValue] = useState(0);
-
-  const handleChange = (_: string, valueAsNumber: number) => {
-    if (isNaN(valueAsNumber)) {
-      setValue(0);
-    } else {
-      setValue(valueAsNumber);
-    }
-  };
+const AmountInput = ({ amount, handleAmountChange }) => {
+  // Define a component named AmountInput
 
   return (
-    <NumberInput defaultValue={0} min={0} value={value} onChange={handleChange} minW="150">
-      <NumberInputField />
-    </NumberInput>
+    <Input
+      defaultValue={0}
+      min={0}
+      value={amount}
+      _placeholder="Amount"
+      borderColor="black"
+      borderWidth="1px"
+      _placeholder={{
+        // Adding styles to the placeholder
+        color: "black", // Sets the color of the placeholder text
+        fontFamily: "Arial, sans-serif", // Changes the font family of the placeholder
+        fontStyle: "italic", // Optionally, makes the placeholder text italic
+      }}
+      placeholder="Amount"
+      boxShadow="hg" // Apply medium shadow predefined by Chakra UI
+      bgColor="#3ae8d7"
+      _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+      _focus={{ boxShadow: "xl" }}
+      onChange={handleAmountChange}
+      minW="150"
+    ></Input>
   );
 };
 
