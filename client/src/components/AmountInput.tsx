@@ -1,10 +1,8 @@
-import React, { useState } from 'react'; // Import React
-import {
-  NumberInput,
-  NumberInputField,
-} from '@chakra-ui/react';
+import React, { useState } from "react"; // Import React
+import { NumberInput, NumberInputField } from "@chakra-ui/react";
 
-const AmountInput = () => { // Define a component named AmountInput
+const AmountInput = () => {
+  // Define a component named AmountInput
   const [value, setValue] = useState(0);
 
   const handleChange = (_: string, valueAsNumber: number) => {
@@ -16,8 +14,20 @@ const AmountInput = () => { // Define a component named AmountInput
   };
 
   return (
-    <NumberInput defaultValue={0} min={0} value={value} onChange={handleChange} minW="150">
-      <NumberInputField />
+    <NumberInput
+      defaultValue={0}
+      min={0}
+      value={value}
+      onChange={handleChange}
+      minW="150"
+    >
+      <NumberInputField
+        borderColor="black"
+        borderWidth="1px"
+        boxShadow="hg" // Apply medium shadow predefined by Chakra UI
+        _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+        _focus={{ boxShadow: "xl" }}
+      ></NumberInputField>
     </NumberInput>
   );
 };
