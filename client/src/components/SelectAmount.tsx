@@ -1,11 +1,9 @@
 import React from 'react';
 import { RadioGroup, Stack, Radio, Divider } from '@chakra-ui/react';
 
-const SelectAmount = (amount, handleAmountChange) => {
-  const [value, setValue] = React.useState('1');
-
+const SelectAmount = ({ amount, setAmount }) => {
   return (
-    <RadioGroup onChange={setValue} value={value}>
+    <RadioGroup onChange={setAmount} value={amount}>
       <Stack direction='row' spacing={6}>
         <Stack direction='column' alignItems='center'>
           <Radio value='0.1' />

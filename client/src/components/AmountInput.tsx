@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Import React
 import { Input } from "@chakra-ui/react";
 
-const AmountInput = (amount, handleAmountChange) => {
+const AmountInput = ({ amount, handleAmountChange }) => {
   // Define a component named AmountInput
 
   return (

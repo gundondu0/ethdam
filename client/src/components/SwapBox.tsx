@@ -11,19 +11,20 @@ const SwapBox = () => {
   const [inputType, setInputType] = useState(true);
 
   const [token, setToken] = useState("");
-  const handleTokenChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleTokenChange = (event) => {
     setToken(event.target.value);
+    console.log(event.target.value);
   };
 
   const [amount, setAmount] = useState("");
-  const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAmountChange = (event) => {
     setAmount(event.target.value);
+    console.log(event.target.value);
   }
   return (
     <Flex
       direction="column"
       alignItems="center"
-      maxWidth="700px"
       margin="auto"
       border="1px solid #CBD5E0"
       borderRadius="md"
@@ -33,11 +34,12 @@ const SwapBox = () => {
       bgGradient="linear(to-r, #5be3d5, secondary)"
       borderColor="black"
       borderWidth="2px"
+      minW="35vw"
     >
       <Flex flex="3" alignItems="center" mb="4">
-        {inputType ? <AmountInput amount={amount} handleAmountChange={handleAmountChange} /> : <SelectAmount amount={amount} handleAmountChange={handleAmountChange} />}
+        {inputType ? <AmountInput amount={amount} handleAmountChange={handleAmountChange} /> : <SelectAmount amount={amount} setAmount={setAmount} />}
         <Spacer minW="2" />
-        <SelectToken value={token} handleChange={handleTokenChange} />
+        <SelectToken token={token} handleTokenChange={handleTokenChange} />
         <Box
           _hover={{ cursor: "pointer", bg: "lightgray" }}
           borderRadius={15}

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       justifyContent="center"
       border="000000"
       borderColor={"black"}
-      borderWidth="2px"
+      borderTop="2px"
       borderStyle={"solid"}
     >
       <Text>Made for ETHDam 2024 with patience and love</Text>

@@ -49,8 +49,20 @@ const WithdrawItem = ({ address, delay, amount, onItemChange }) => {
   }
 
   return (
-    <InputGroup width="100%">
-      <Input placeholder="Address" value={address} onChange={handleAddressChange} />
+    <InputGroup width="100%"
+    >
+      <Input flex="1" placeholder="Wallet Address" value={address} onChange={handleAddressChange} border="1px solid black"
+        borderRadius="md"
+        mr={2}
+        bgColor="#3ae8d7"
+        _placeholder={{
+          // Adding styles to the placeholder
+          color: "black", // Sets the color of the placeholder text
+          fontFamily: "Arial, sans-serif", // Changes the font family of the placeholder
+          fontStyle: "italic", // Optionally, makes the placeholder text italic
+        }}
+        _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+        _focus={{ boxShadow: "xl" }} />
       <InputRightElement width="4.5rem">
         <>
           <IconButton
@@ -76,13 +88,13 @@ const WithdrawItem = ({ address, delay, amount, onItemChange }) => {
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Delay in seconds</FormLabel>
+                  <FormLabel>Delay</FormLabel>
                   <Input placeholder="10" value={delay} onChange={handleDelayChange} />
                 </FormControl>
               </ModalBody>
 
               <ModalFooter>
-                <Button onClick={onClose}>Close</Button>
+                <Button mb="4" onClick={onClose}>Close</Button>
               </ModalFooter>
             </ModalContent>
           </Modal>
@@ -108,7 +120,7 @@ const WithdrawBox = () => {
     setWithdrawItems(updatedWithdrawItems);
   };
 
-  const handleWithdraw = () => {
+  const handleWithdraw = (withdrawItems) => {
     // Handle withdraw action here
   };
 
@@ -122,14 +134,13 @@ const WithdrawBox = () => {
     <Flex
       direction="column"
       alignItems="center"
-      maxWidth="400px"
       margin="auto"
-      border="1px solid #CBD5E0"
+      border="2px solid black"
       borderRadius="md"
       p={4}
-      maxHeight="300px"
-      overflowY="auto"
-      position="relative"
+      maxHeight="500px"
+      bgGradient="linear(to-r, #5be3d5, secondary)"
+      minW="35vw"
     >
       {withdrawItems.map((item, index) => (
         <Flex
@@ -137,29 +148,38 @@ const WithdrawBox = () => {
           alignItems="center"
           justifyContent="space-between"
           width="100%"
+          overflowY="auto"
+
         >
-          <WithdrawItem
-            address={item.address}
-            delay={item.delay}
-            amount={item.amount}
-            onItemChange={(updatedItem) => handleItemChange(index, updatedItem)}
-          />
-          <IconButton
-            icon={<CloseIcon />}
-            aria-label="Remove withdraw item"
-            onClick={() => handleRemoveWithdrawItem(index)}
-          />
+          <Flex flex="3" alignItems="center" mb="4">
+            <WithdrawItem
+              address={item.address}
+              delay={item.delay}
+              amount={item.amount}
+              onItemChange={(updatedItem) => handleItemChange(index, updatedItem)}
+            />
+            <IconButton
+              icon={<CloseIcon />}
+              aria-label="Remove withdraw item"
+              onClick={() => handleRemoveWithdrawItem(index)}
+            />
+          </Flex>
         </Flex>
       ))}
-      <Flex mt={4}>
-        <Button bg="primary" onClick={handleWithdraw} mr={2}>
+      <Flex mt={4} mb="4">
+        <Button bg="primary" onClick={handleWithdraw}
+          borderColor="black" // Sets the border color
+          borderWidth="1px" // Sets the border width
+          borderStyle="solid" mr={2}>
           Withdraw
         </Button>
-        <Button bg="primary" onClick={handleAddWithdrawItem}>
+        <Button bg="primary" onClick={handleAddWithdrawItem} borderColor="black" // Sets the border color
+          borderWidth="1px" // Sets the border width
+          borderStyle="solid">
           + Add Wallet
         </Button>
       </Flex>
-    </Flex>
+    </Flex >
   );
 };
 

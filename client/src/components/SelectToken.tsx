@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Select } from "@chakra-ui/react";
 
-const SelectToken = (value, handleValueChange) => {
+const SelectToken = ({ token, handleTokenChange }) => {
   return (
     <Select
       placeholder="Select a token"
-      fontStyle={value ? "normal" : "italic"}
+      fontStyle={token ? "normal" : "italic"}
       fontFamily="Arial, sans-serif"
       color="black"
-      value={value}
-      onChange={handleValueChange}
+      value={token}
+      onChange={handleTokenChange}
       mr={2}
       borderColor="black"
       borderWidth="1px"
