@@ -4,7 +4,6 @@ import NextLink from "next/link";
 import { MetaMaskButton } from "@metamask/sdk-react-ui";
 import { useState } from "react";
 
-
 const Navbar = () => {
   return (
     <Box
@@ -16,6 +15,9 @@ const Navbar = () => {
       alignItems="center"
       justifyContent="space-between"
       border="000000"
+      borderColor={"black"}
+      borderWidth="2px"
+      borderStyle={"solid"}
     >
       <Box>
         <NextLink href="/" passHref>
