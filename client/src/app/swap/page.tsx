@@ -1,20 +1,26 @@
 "use client"
-import AmountInput from '@/components/AmountInput';
-import ButtonState from '@/components/ButtonState';
-import ErrorTransaction from '@/components/ErrorTransaction';
-import SelectToken from '@/components/SelectToken';
 import SwapBox from '@/components/SwapBox';
-import TransactionConfirmed from '@/components/TransactionConfirmed';
 import WithdrawalBox from '@/components/WithdrawalBox';
-import { Flex, HStack, Spacer, VStack } from '@chakra-ui/react'
+import { Flex, HStack, Spacer, VStack, Text } from '@chakra-ui/react'
 
 
 export default function Home() {
   return (
-    <Flex direction="row" align="center" mt="4">
-      <SwapBox />
+    <Flex direction="row" align="center" justify="center" mt="7vh" mr="7vw" ml="7vw">
+      <Flex direction="column" align="center" w="40vw">
+        <Text fontSize="2xl" fontWeight="bold" color="text">
+          Deposit
+        </Text>
+        <SwapBox />
+      </Flex>
+      <Spacer minW="4" />
 
-      <WithdrawalBox />
+      <Flex direction="column" align="center" w="40vw">
+        <Text fontSize="2xl" fontWeight="bold" color="text">
+          Withdraw
+        </Text>
+        <WithdrawalBox />
+      </Flex>
     </Flex>
   );
 }
