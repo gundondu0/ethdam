@@ -1,23 +1,14 @@
 import React, { useState } from "react"; // Import React
-import { NumberInput, NumberInputField, Input } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 
-const AmountInput = () => {
+const AmountInput = (amount, handleAmountChange) => {
   // Define a component named AmountInput
-  const [value, setValue] = useState(0);
-
-  const handleChange = (_: string, valueAsNumber: number) => {
-    if (isNaN(valueAsNumber)) {
-      setValue(0);
-    } else {
-      setValue(valueAsNumber);
-    }
-  };
 
   return (
     <Input
       defaultValue={0}
       min={0}
-      value={value}
+      value={amount}
       _placeholder="Amount"
       borderColor="black"
       borderWidth="1px"
@@ -25,9 +16,7 @@ const AmountInput = () => {
       bgColor="#3ae8d7"
       _hover={{ boxShadow: "lg" }} // Larger shadow on hover
       _focus={{ boxShadow: "xl" }}
-      onChange={(event) =>
-        handleChange(event.target.value, parseFloat(event.target.value))
-      }
+      onChange={handleAmountChange}
       minW="150"
     ></Input>
   );

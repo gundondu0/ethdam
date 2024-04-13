@@ -10,6 +10,15 @@ import SelectAmount from "./SelectAmount";
 const SwapBox = () => {
   const [inputType, setInputType] = useState(true);
 
+  const [token, setToken] = useState("");
+  const handleTokenChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setToken(event.target.value);
+  };
+
+  const [amount, setAmount] = useState("");
+  const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAmount(event.target.value);
+  }
   return (
     <Flex
       direction="column"
@@ -26,9 +35,9 @@ const SwapBox = () => {
       borderWidth="2px"
     >
       <Flex flex="3" alignItems="center" mb="4">
-        {inputType ? <AmountInput /> : <SelectAmount />}
+        {inputType ? <AmountInput amount={amount} handleAmountChange={handleAmountChange} /> : <SelectAmount amount={amount} handleAmountChange={handleAmountChange} />}
         <Spacer minW="2" />
-        <SelectToken />
+        <SelectToken value={token} handleChange={handleTokenChange} />
         <Box
           _hover={{ cursor: "pointer", bg: "lightgray" }}
           borderRadius={15}
@@ -40,7 +49,7 @@ const SwapBox = () => {
           <BiTransfer size={30} onClick={() => setInputType(!inputType)} />
         </Box>
       </Flex >
-      <ButtonState />
+      <ButtonState amount={amount} token={token} />
     </Flex >
   );
 };
