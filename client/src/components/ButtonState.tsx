@@ -38,15 +38,6 @@ const ButtonState = () => {
           >
             Swap
           </Button>
-          <Spacer minW={4} />
-          <Flex direction="column">
-            <Text fontSize={"xs"}>
-              {chainId && `Connected chain: ${chainId}`}
-            </Text>
-            <Text fontSize={"xs"}>
-              {account && `Connected account: ${account}`}
-            </Text>
-          </Flex>
         </Flex>
       )}
     </div>
