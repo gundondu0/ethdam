@@ -25,6 +25,7 @@ const AmountInput = () => {
         borderColor="black"
         borderWidth="1px"
         boxShadow="hg" // Apply medium shadow predefined by Chakra UI
+        bgColor="#3ae8d7"
         _hover={{ boxShadow: "lg" }} // Larger shadow on hover
         _focus={{ boxShadow: "xl" }}
       ></NumberInputField>
