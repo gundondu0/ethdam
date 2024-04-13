@@ -19,14 +19,26 @@ const ButtonState = () => {
   return (
     <div>
       {!connected ? (
-        <Button bg="primary" onClick={connect}>
+        <Button
+          bg="primary"
+          onClick={connect}
+          borderColor="black" // Sets the border color
+          borderWidth="1px" // Sets the border width
+          borderStyle="solid"
+        >
           Connect Wallet
         </Button>
-      ) : (<Flex direction={"column"} align="center">
-        <Button bg="primary">
-          Swap
-        </Button>
-      </Flex>
+      ) : (
+        <Flex direction={"column"} align="center">
+          <Button
+            bg="primary"
+            borderColor="black" // Sets the border color
+            borderWidth="1px" // Sets the border width
+            borderStyle="solid"
+          >
+            Swap
+          </Button>
+        </Flex>
       )}
     </div>
   );

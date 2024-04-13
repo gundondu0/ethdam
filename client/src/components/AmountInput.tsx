@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // Import React
-import { NumberInput, NumberInputField } from "@chakra-ui/react";
+import { NumberInput, NumberInputField, Input } from "@chakra-ui/react";
 
 const AmountInput = () => {
   // Define a component named AmountInput
@@ -14,21 +14,22 @@ const AmountInput = () => {
   };
 
   return (
-    <NumberInput
+    <Input
       defaultValue={0}
       min={0}
       value={value}
-      onChange={handleChange}
+      _placeholder="Amount"
+      borderColor="black"
+      borderWidth="1px"
+      boxShadow="hg" // Apply medium shadow predefined by Chakra UI
+      bgColor="#3ae8d7"
+      _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+      _focus={{ boxShadow: "xl" }}
+      onChange={(event) =>
+        handleChange(event.target.value, parseFloat(event.target.value))
+      }
       minW="150"
-    >
-      <NumberInputField
-        borderColor="black"
-        borderWidth="1px"
-        boxShadow="hg" // Apply medium shadow predefined by Chakra UI
-        _hover={{ boxShadow: "lg" }} // Larger shadow on hover
-        _focus={{ boxShadow: "xl" }}
-      ></NumberInputField>
-    </NumberInput>
+    ></Input>
   );
 };
 
