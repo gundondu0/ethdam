@@ -21,7 +21,13 @@ const AmountInput = () => {
       onChange={handleChange}
       minW="150"
     >
-      <NumberInputField borderColor="black" borderWidth="1px" />
+      <NumberInputField
+        borderColor="black"
+        borderWidth="1px"
+        boxShadow="hg" // Apply medium shadow predefined by Chakra UI
+        _hover={{ boxShadow: "lg" }} // Larger shadow on hover
+        _focus={{ boxShadow: "xl" }}
+      ></NumberInputField>
     </NumberInput>
   );
 };
