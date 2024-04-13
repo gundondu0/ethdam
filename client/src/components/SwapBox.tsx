@@ -20,7 +20,7 @@ const SwapBox = () => {
       p={4}
       maxHeight="300px"
       overflowY="auto"
-      bgGradient="radial(circle, secondary, accent)"
+      bgGradient="linear(to-r, #5be3d5, secondary)"
       borderColor="black"
       borderWidth="2px"
     >
