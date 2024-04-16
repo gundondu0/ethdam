@@ -16,7 +16,7 @@ const Navbar = () => {
       justifyContent="space-between"
       border="000000"
       borderColor={"black"}
-      borderWidth="2px"
+      borderBottom="2px"
       borderStyle={"solid"}
     >
       <Box>

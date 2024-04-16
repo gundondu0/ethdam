@@ -1,23 +1,15 @@
 import React, { useState } from "react";
 import { Select } from "@chakra-ui/react";
 
-interface SelectTokenProps {}
-
-const SelectToken: React.FC<SelectTokenProps> = () => {
-  const [value, setValue] = useState("ETH");
-
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setValue(event.target.value);
-  };
-
+const SelectToken = ({ token, handleTokenChange }) => {
   return (
     <Select
       placeholder="Select a token"
-      fontStyle={value ? "normal" : "italic"}
+      fontStyle={token ? "normal" : "italic"}
       fontFamily="Arial, sans-serif"
       color="black"
-      value={value}
-      onChange={handleChange}
+      value={token}
+      onChange={handleTokenChange}
       mr={2}
       borderColor="black"
       borderWidth="1px"
